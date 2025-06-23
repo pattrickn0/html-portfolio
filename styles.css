@@ -101,7 +101,7 @@ div > svg {
 .carrer {
     display: flex;
     flex-direction: row;
-    height: 410px;
+    height: 500px;
 }
 
 .carrer-text {
@@ -138,6 +138,27 @@ div > svg {
 
 .experience > div > p, .academic > div > p{
     color: rgb(29, 29, 29);
+}
+
+.course-section {
+    display: grid; 
+    grid-template-columns: 1fr;
+    grid-template-rows: 125px, minmax(250px, auto);
+}
+
+.course-name{
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.course-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    height: 250px;
 }
 
 .project-text {
