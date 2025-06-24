@@ -1,6 +1,6 @@
 body {
     background-color: rgb(248, 252, 252);
-    width: 70%;
+    width: 75%;
     margin: auto;
     margin-top: 0%;
 
@@ -8,24 +8,29 @@ body {
 }
 
 .about {
-    margin-top: 80px;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 250px;
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    height: 360px;
 }
 
 .about-left {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
+.about-right {
+    display: flex;
+
+}
+
 .photo {
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 215px;
+    object-fit: cover;
     margin: 0px 15px 0px 15px;
-    border-radius: 50%;
+    border-radius: 25%;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05), 0 5px 5px rgba(0, 0, 0, 0.05)
 }
 
@@ -37,13 +42,13 @@ body {
 }
 
 .about-name {
-    font-size: 48px;
-    margin-top: -10px;
-    margin-bottom: 20px;
+    font-size: 38px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .about-text {
-    margin-top: 20px;
+    margin-top: 80px;
     font-size: 22px;
     text-align: justify;
     color: rgb(46, 46, 46);
@@ -158,27 +163,39 @@ div > svg {
     justify-content: space-between;
     align-items: center;
     gap: 10%;
-    height: 200px;
-
+    height: 250px;
 }
 
 .course-box > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     border: 1px;
     border-color: rgb(204, 204, 204);
     border-style: solid;
     border-radius: 10px;
     width: 250px;
-    height: 150px;
+    height: 140px;
+    box-shadow: 0 5px 5px #c4c4c4;
 }
 
 .course-box > div > a > button {
     width: 100%;
-    height: 60px;
+    height: 35px;
+    border: 0px;
+    background-color: rgb(51, 255, 0);
+    background: linear-gradient(10deg, #071724 5%, #2e4b86 100%);
+    color: rgb(255, 255, 255);
 }
 
 .course-title, .course-text {
-    margin: 0px;
-    text-align: center;
+    margin: 0px 0px 0px 5px;
+    text-align: start;
+}
+
+.course-text {
+    margin-bottom: 10px;
+    text-align: start;
 }
 
 .project-text {
