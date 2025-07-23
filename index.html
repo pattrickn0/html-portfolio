@@ -34,23 +34,33 @@
             background: linear-gradient(to bottom, #FFFFFF 56%, #1D3EE5 88%, #0F1F73 100%);
         }
     </style>
+    <script>
+        function handleNavbarScroll() {
+            const navbar = document.getElementById('navbar');
+            const scrollThreshold = 50;
+
+            if (window.scrollY > scrollThreshold) {
+                navbar.className = "h-[70px] max-xl:h-[60px] w-[100%] bg-stone-950/60 fixed top-0 z-50 shadow-xl/10 backdrop-blur-md transition-all duration-800";
+            } else {
+                navbar.className = "h-[70px] max-xl:h-[60px] w-[100%] bg-white-default/0 fixed top-0 z-50 transition-all duration-200";
+            }
+        }
+        window.addEventListener('scroll', handleNavbarScroll);
+    </script>
 </head>
 
 <body>
-    <nav class="h-[70px] max-xl:h-[60px] w-[100%] bg-white-default/10 fixed top-0 z-50">
+    <nav id="navbar" class="h-[70px] max-xl:h-[60px] w-[100%] bg-white-default/10 fixed top-0 z-50">
         <div
             class="flex flex-row items-center justify-between w-[85vw] max-lg:w-[92vw] m-auto font-outfit text-white-default text-[28px] max-2xl:text-[26] max-xl:text-[24px]">
             <a href="#home"
-                class="font-outfit text-[46px] max-2xl:text-[42px] max-xl:text-[38px] max-sm:text-[34px] max-sm:pt-1 text-white-default">Pattrick
+                class="font-outfit text-[46px] max-2xl:text-[42px] max-xl:text-[38px] max-sm:text-[34px] max-sm:pt-1 text-white-default hover:scale-110">Pattrick
                 Nunes</a>
             <ul class="flex flex-row max-lg:hidden">
-                <li class="pr-10 max-2xl:pr-6 max-xl:pr-2"><a href="#about">About</a></li>
-                <li class="px-10 max-2xl:pr-6 max-xl:pr-2"><a href="#projects">Projects</a></li>
-                <li class="px-10 max-2xl:pr-6 max-xl:pr-2"><a href="#contact">Contact</a></li>
-                <li class="pl-10 max-2xl:pr-6 max-xl:pr-2"><a
-                        class="border border-solid border-white-default rounded-full px-1 py-1">Change
-                        Language</a>
-                </li>
+                <li class="pr-10 max-2xl:pr-6 max-xl:pr-2 hover:scale-110"><a href="#about">About</a></li>
+                <li class="px-10 max-2xl:pr-6 max-xl:pr-2 hover:scale-110"><a href="#projects">Projects</a></li>
+                <li class="px-10 max-2xl:pr-6 max-xl:pr-2 hover:scale-110"><a href="#contact">Contact</a></li>
+                <li class="pl-10 max-2xl:pr-6 max-xl:pr-2 hover:scale-110"><button class="border border-solid border-white-default rounded-full px-2">Change Language</button></li>
             </ul>
             <a class="hidden max-lg:block"><img src="./assets/icons/menu.svg"
                     class="h-[65px] w-[55px] max-sm:h-[55px] max-sm:pt-1 max-lg:invert"></a>
@@ -133,10 +143,10 @@
                     </div>
                 </div>
                 <div class="flex flex-row justify-end font-outfit max-lg:justify-center max-lg:mt-[115px] max-lg:hidden ">
-                    <button class="border border-solid border-stone-400 rounded-[8px] px-3 text-[30px] max-2xl:text-[27px] max-xl:text-[24px]">View
+                    <button class="border border-solid border-stone-400 rounded-[8px] px-3 text-[30px] max-2xl:text-[27px] max-xl:text-[24px] hover:scale-105">View
                         Academic</button>
                     <a href="#projects"><button
-                            class="border border-solid border-stone-400 rounded-[8px] px-3 text-[30px] max-2xl:text-[27px] max-xl:text-[24px] ml-10">My
+                            class="border border-solid border-stone-400 rounded-[8px] px-3 text-[30px] max-2xl:text-[27px] max-xl:text-[24px] ml-10 hover:scale-105">My
                             Projects</button></a>
                 </div>
             </div>
@@ -198,7 +208,7 @@
                             <a href="https://github.com/pattrickn0" target="_blank">
                                 <div class="flex flex-row items-center max-md:mx-2">
                                     <img src="./assets/icons/github_logo.svg"
-                                        class="h-[75px] max-2xl:h-[70px] max-xl:h-[65px] max-md:h-[55px]  max-md:invert py-2">
+                                        class="h-[75px] max-2xl:h-[70px] max-xl:h-[65px] max-md:h-[55px]  max-md:invert py-2 hover:scale-110">
                                     <p
                                         class="font-montserrat text-[24px] max-2xl:text-[22px] max-xl:text-[20px] max-lg:text-[18px] max-md:text-[16px] max-md:hidden ml-2">
                                         Github</p>
@@ -207,7 +217,7 @@
                             <a href="https://www.linkedin.com/in/pattrick-nunes/" target="_blank">
                                 <div class="flex flex-row items-center max-md:mx-2">
                                     <img src="./assets/icons/linkedin_logo.svg"
-                                        class="h-[68px] max-2xl:h-[63px] max-xl:h-[59px] max-md:h-[52px] max-md:invert ml-1 py-2">
+                                        class="h-[68px] max-2xl:h-[63px] max-xl:h-[59px] max-md:h-[52px] max-md:invert ml-1 py-2 hover:scale-110">
                                     <p
                                         class="font-montserrat text-[24px] max-2xl:text-[22px] max-xl:text-[20px] max-lg:text-[18px] max-md:text-[16px] max-md:hidden ml-2">
                                         Linkedin</p>
@@ -216,7 +226,7 @@
                             <a href="https://www.instagram.com/pattrick_nunes/" target="_blank">
                                 <div class="flex flex-row items-center max-md:mx-2">
                                     <img src="./assets/icons/instagram_logo.svg"
-                                        class="h-[75px] max-2xl:h-[70px] max-xl:h-[65px] max-md:h-[55px] max-md:invert py-2">
+                                        class="h-[75px] max-2xl:h-[70px] max-xl:h-[65px] max-md:h-[55px] max-md:invert py-2 hover:scale-110">
                                     <p
                                         class="font-montserrat text-[24px] max-2xl:text-[22px] max-xl:text-[20px] max-lg:text-[18px] max-md:text-[16px] max-md:hidden ml-2">
                                         Instagram</p>
